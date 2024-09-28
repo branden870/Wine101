@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://gardenerspath.com/wp-content/uploads/2022/06/How-to-Grow-Grapevines-Feature.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            background: rgba(139, 0, 0, 0.8); /* Dark red with transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #800000; /* Dark red */
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #A00000; /* Lighter dark red on hover */
+        }
+        #message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Age Verification</h1>
+    <p>Are you 18 years old or older?</p>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+    <div id="message"></div>
+</div>
+
+<script>
+    document.getElementById('yesButton').addEventListener('click', function() {
+        document.getElementById('message').innerText = 'Thank you! You may proceed.';
+        // Redirect to the new page
+        setTimeout(() => {
+            window.location.href = 'https://branden870.github.io/Wine/';
+        }, 2000); // Redirect after 2 seconds
+    });
+
+    document.getElementById('noButton').addEventListener('click', function() {
+        document.getElementById('message').innerText = 'Sorry, you must be at least 18 years old.';
+    });
+</script>
+
+</body>
+</html>
